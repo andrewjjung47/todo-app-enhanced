@@ -223,17 +223,19 @@ label[for='toggle-all'] {
 	appearance: none;
 }
 
-#todo-list li .priority-btn {
+#todo-list li .priority-btn,
+#todo-list li .priority2-btn {
 	display: none;
 	height: auto;
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	left: 34px;
+	right: 75px;
+      margin: auto 0;
 	padding: 0 4px;
 	background-color: #fcfcfc;
 	/*color: #d00;*/
-	z-index: 10;
+	/*z-index: 10;*/
 	/* Mobile Safari */
 	border: none;
 	-webkit-appearance: none;
@@ -242,12 +244,21 @@ label[for='toggle-all'] {
 	appearance: none;
 }
 
-#todo-list li:hover .priority-btn {
+#todo-list li .priority-btn {
+  right: 95px;
+}
+
+#todo-list li:hover .priority-btn,
+#todo-list li:hover .priority2-btn {
 	display: block;
 }
 
 #todo-list li .priority-btn:after {
 	content: '!';
+}
+
+#todo-list li .priority2-btn:after {
+  content: '!!';
 }
 
 #todo-list li .toggle:after {
