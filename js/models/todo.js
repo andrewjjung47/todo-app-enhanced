@@ -23,9 +23,9 @@ var app = app || {};
 				completed: !this.get('completed')
 			});
 		},
-           togglePriority: function () {
+           togglePriority: function (className) {
                 this.save({
-                    priority: !this.get('priority')
+                    priority: !this.get('priority') ? className : false
                 });
            }
 	});
