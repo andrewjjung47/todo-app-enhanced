@@ -5,9 +5,7 @@ after finished tasks.
 
 TODO list
   - Let the user set the priority status when creating the todo item.
-  - Let the user modify the priority status.
   - Let users filter or sort by priority status.
-  - Expand the priority feature to have more than two levels.
   - Add a recycle bin for recovering deleted todos.
   - Add colors, so people can associate different todos with each other.
   - Add labels for sorting and filtering.
