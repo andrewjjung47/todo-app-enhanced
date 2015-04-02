@@ -21,7 +21,9 @@ var app = app || {};
     events: {
       'keypress #new-todo': 'createOnEnter',
       'click #clear-completed': 'clearCompleted',
-      'click #toggle-all': 'toggleAllComplete'
+      'click #toggle-all': 'toggleAllComplete',
+      'click .todo-input .priority-btn': 'togglePriority',
+      'click .todo-input .priority2-btn': 'togglePriority'
     },
 
     // At initialization we bind to the relevant events on the `Todos`
@@ -30,6 +32,7 @@ var app = app || {};
     initialize: function () {
       this.allCheckbox = this.$('#toggle-all')[0];
       this.$input = this.$('#new-todo');
+      this.$inputDiv = this.$('.todo-input');
       this.$footer = this.$('#footer');
       this.$main = this.$('#main');
       this.$list = $('#todo-list');
@@ -126,6 +129,18 @@ var app = app || {};
           completed: completed
         });
       });
+    },
+
+    togglePriority: function (e) {
+      // Get name of the class associated with the priority button
+      var classNameToAdd = e.target.className.replace('-btn', '');
+
+      // Toggle between priority, priority2, and no class
+      this.$inputDiv.toggleClass('priority', !this.$inputDiv.hasClass('priority') &&
+                                 'priority' === classNameToAdd);
+
+      this.$inputDiv.toggleClass('priority2', !this.$inputDiv.hasClass('priority2') &&
+                                 'priority2' === classNameToAdd);
     }
   });
 })(jQuery);
