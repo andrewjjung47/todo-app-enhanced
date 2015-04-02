@@ -235,7 +235,6 @@ label[for='toggle-all'] {
   padding: 0 4px;
   margin: auto 0;
   background-color: #fcfcfc;
-  /*color: #d00;*/
   /*z-index: 10;*/
   /* Mobile Safari */
   border: none;
@@ -249,9 +248,7 @@ label[for='toggle-all'] {
   right: 95px;
 }
 
-#todo-list li:hover .priority-btn {
-  display: block;
-}
+#todo-list li:hover .priority-btn,
 #todo-list li:hover .priority2-btn {
   display: block;
 }
@@ -321,7 +318,7 @@ label[for='toggle-all'] {
   color: #d66;
 }
 
-#todo-list li.priority2 .priority-btn:after {
+#todo-list li.priority2 .priority2-btn:after {
   color: #d66;
 }
 
