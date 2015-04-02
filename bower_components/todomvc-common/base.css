@@ -316,19 +316,23 @@ label[for='toggle-all'] {
   text-decoration: line-through;
 }
 
-#todo-list li.priority:not(.completed) label {
+#todo-list li.priority:not(.completed) label,
+.todo-input.priority #new-todo{
   color: #faac58;
 }
 
-#todo-list li.priority .priority-btn:after {
+#todo-list li.priority .priority-btn:after,
+.todo-input.priority .priority-btn:after {
   color: #faac58;
 }
 
-#todo-list li.priority2:not(.completed) label {
+#todo-list li.priority2:not(.completed) label,
+.todo-input.priority2 #new-todo {
   color: #d66;
 }
 
-#todo-list li.priority2 .priority2-btn:after {
+#todo-list li.priority2 .priority2-btn:after,
+.todo-input.priority2 .priority2-btn:after {
   color: #d66;
 }
 
