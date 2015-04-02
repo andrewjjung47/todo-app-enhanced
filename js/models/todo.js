@@ -25,7 +25,7 @@ var app = app || {};
 		},
            togglePriority: function (className) {
                 this.save({
-                    priority: !this.get('priority') ? className : false
+                    priority: (this.get('priority') === className) ? false : className
                 });
            }
 	});
