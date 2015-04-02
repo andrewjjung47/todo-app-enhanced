@@ -33,6 +33,11 @@ body {
   font-smoothing: antialiased;
 }
 
+.todo-input {
+  position: relative;
+  width: 100%;
+}
+
 button,
 input[type="checkbox"] {
   outline: none;
@@ -223,19 +228,26 @@ label[for='toggle-all'] {
   appearance: none;
 }
 
-#todo-list li .priority-btn,
-#todo-list li .priority2-btn {
-  display: none;
-  height: auto;
+.priority-btn:after {
+  content: '!';
+}
+
+.priority2-btn:after {
+  content: '!!';
+}
+
+.priority-btn,
+.priority2-btn {
+  display: block;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 75px;
+  font-size: 24px;
   height: 40px;
   padding: 0 4px;
   margin: auto 0;
   background-color: #fcfcfc;
-  /*z-index: 10;*/
   /* Mobile Safari */
   border: none;
   -webkit-appearance: none;
@@ -244,8 +256,13 @@ label[for='toggle-all'] {
   appearance: none;
 }
 
-#todo-list li .priority-btn {
+.priority-btn {
   right: 95px;
+}
+
+#todo-list li .priority-btn,
+#todo-list li .priority2-btn {
+  display: none;
 }
 
 #todo-list li:hover .priority-btn,
@@ -264,14 +281,6 @@ label[for='toggle-all'] {
 
 .priority2-btn:hover {
   color: #d66;
-}
-
-#todo-list li .priority-btn:after {
-  content: '!';
-}
-
-#todo-list li .priority2-btn:after {
-  content: '!!';
 }
 
 #todo-list li .toggle:after {
